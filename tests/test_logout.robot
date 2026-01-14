@@ -1,10 +1,13 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../resources/keywords.robot
+Library           SeleniumLibrary
+Resource          ../resources/keywords.robot
 Suite Teardown    Close Browser
+Test Teardown     Run Keyword If Test Failed    Capture Page Screenshot
 
 *** Test Cases ***
-User can logout successfully
+User Can Logout Successfully
+    [Documentation]    Vérifie que l'utilisateur peut se déconnecter correctement
     Open Application Browser
-    Login As Standard User
-    Logout User
+    Login With Standard User
+    Logout From Application
+    Verify Login Page Is Displayed

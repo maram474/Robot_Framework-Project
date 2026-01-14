@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20260114 18:12:00.808" rpa="false" schemaversion="4">
-<suite id="s1" name="Tests" source="C:\robot_framework_project\tests">
-<suite id="s1-s1" name="Test About" source="C:\robot_framework_project\tests\test_about.robot">
-<test id="s1-s1-t1" name="User can open About page" line="7">
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20260114 19:01:54.882" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Reset App" source="C:\robot_framework_project\tests\test_reset_app.robot">
+<test id="s1-t1" name="User Can Reset Application State" line="8">
 <kw name="Open Application Browser" library="keywords">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:12:01.275" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA593970&gt;</msg>
-<status status="PASS" starttime="20260114 18:12:01.275" endtime="20260114 18:12:01.275"/>
+<msg timestamp="20260114 19:01:55.185" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000017B846F9DB0&gt;</msg>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:55.185"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${prefs}</var>
 <arg>credentials_enable_service=${False}</arg>
 <arg>profile.password_manager_enabled=${False}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:12:01.290" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:12:01.275" endtime="20260114 18:12:01.290"/>
+<msg timestamp="20260114 19:01:55.185" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:55.185"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
@@ -27,1167 +25,220 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:01.291" endtime="20260114 18:12:01.291"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:01.291" endtime="20260114 18:12:01.291"/>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:55.185"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:01.291" endtime="20260114 18:12:01.291"/>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:55.185"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:01.291" endtime="20260114 18:12:01.292"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:01.292" endtime="20260114 18:12:01.292"/>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:55.185"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:01.292" endtime="20260114 18:12:01.292"/>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:55.185"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:12:01.294" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:12:01.292" endtime="20260114 18:12:04.736"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:12:04.736" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:12:04.736" endtime="20260114 18:12:04.953"/>
+<msg timestamp="20260114 19:01:55.185" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:57.807"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:12:04.953" endtime="20260114 18:12:05.011"/>
+<status status="PASS" starttime="20260114 19:01:57.807" endtime="20260114 19:01:57.844"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:12:05.011" endtime="20260114 18:12:05.012"/>
+<status status="PASS" starttime="20260114 19:01:57.844" endtime="20260114 19:01:57.844"/>
 </kw>
-<status status="PASS" starttime="20260114 18:12:01.275" endtime="20260114 18:12:05.012"/>
+<status status="PASS" starttime="20260114 19:01:55.185" endtime="20260114 19:01:57.844"/>
 </kw>
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:05.013" endtime="20260114 18:12:05.683"/>
-</kw>
+<kw name="Login With Standard User" library="keywords">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${LOGIN_USER}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:05.684" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:12:05.683" endtime="20260114 18:12:06.801"/>
+<msg timestamp="20260114 19:01:57.844" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20260114 19:01:57.844" endtime="20260114 19:01:58.939"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${LOGIN_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:06.801" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:12:06.801" endtime="20260114 18:12:07.885"/>
+<msg timestamp="20260114 19:01:58.939" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20260114 19:01:58.939" endtime="20260114 19:01:59.990"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:07.885" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:12:07.885" endtime="20260114 18:12:08.940"/>
+<msg timestamp="20260114 19:01:59.990" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20260114 19:01:59.990" endtime="20260114 19:02:01.100"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:12:08.940" endtime="20260114 18:12:09.293"/>
+<status status="PASS" starttime="20260114 19:02:01.100" endtime="20260114 19:02:01.418"/>
 </kw>
-<status status="PASS" starttime="20260114 18:12:05.013" endtime="20260114 18:12:09.293"/>
+<status status="PASS" starttime="20260114 19:01:57.844" endtime="20260114 19:02:01.418"/>
 </kw>
-<kw name="Open Burger Menu" library="keywords">
-<doc>Ouvre le menu burger et attend que toutes les options soient visibles.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:09.293" endtime="20260114 18:12:09.963"/>
-</kw>
+<kw name="Add Product To Cart" library="keywords">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
+<arg>${ADD_TO_CART_BACKPACK}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:09.963" level="INFO">Clicking button 'id:react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260114 18:12:09.963" endtime="20260114 18:12:11.617"/>
+<msg timestamp="20260114 19:02:01.418" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20260114 19:02:01.418" endtime="20260114 19:02:03.123"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:11.617" endtime="20260114 18:12:12.261"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:09.293" endtime="20260114 18:12:12.261"/>
-</kw>
-<kw name="Open About Page" library="keywords">
-<doc>Sélectionne "About" dans le menu burger et attend l'ouverture du site externe.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${MENU_ABOUT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:12.261" level="INFO">Clicking element 'id:about_sidebar_link'.</msg>
-<status status="PASS" starttime="20260114 18:12:12.261" endtime="20260114 18:12:18.549"/>
-</kw>
-<kw name="Wait Until Location Contains" library="SeleniumLibrary">
-<arg>saucelabs.com</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" starttime="20260114 18:12:18.549" endtime="20260114 18:12:18.868"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:12.261" endtime="20260114 18:12:18.868"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:01.275" endtime="20260114 18:12:18.869"/>
-</test>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:12:18.871" endtime="20260114 18:12:21.289"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:00.839" endtime="20260114 18:12:21.289"/>
-</suite>
-<suite id="s1-s2" name="Test All Items" source="C:\robot_framework_project\tests\test_all_items.robot">
-<test id="s1-s2-t1" name="User can return to product list using All Items" line="7">
-<kw name="Open Application Browser" library="keywords">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:12:21.320" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA6227D0&gt;</msg>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${prefs}</var>
-<arg>credentials_enable_service=${False}</arg>
-<arg>profile.password_manager_enabled=${False}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:12:21.320" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--incognito</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:21.320"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:12:21.320" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:24.451"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:12:24.454" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:12:24.452" endtime="20260114 18:12:25.001"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:12:25.002" endtime="20260114 18:12:25.383"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:12:25.383" endtime="20260114 18:12:25.383"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:21.320" endtime="20260114 18:12:25.383"/>
-</kw>
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:25.385" endtime="20260114 18:12:26.035"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:26.035" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:12:26.035" endtime="20260114 18:12:27.152"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:27.154" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:12:27.153" endtime="20260114 18:12:28.233"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:28.234" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:12:28.233" endtime="20260114 18:12:29.315"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:12:29.315" endtime="20260114 18:12:29.668"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:25.384" endtime="20260114 18:12:29.668"/>
-</kw>
-<kw name="Click All Items" library="keywords">
-<doc>Sélectionne "All Items" dans le menu burger et vérifie l'affichage de la page des produits.</doc>
-<kw name="Open Burger Menu" library="keywords">
-<doc>Ouvre le menu burger et attend que toutes les options soient visibles.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:29.669" endtime="20260114 18:12:30.312"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:30.312" level="INFO">Clicking button 'id:react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260114 18:12:30.312" endtime="20260114 18:12:31.917"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:31.917" endtime="20260114 18:12:32.560"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:29.669" endtime="20260114 18:12:32.560"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:32.560" level="INFO">Clicking element 'id:inventory_sidebar_link'.</msg>
-<status status="PASS" starttime="20260114 18:12:32.560" endtime="20260114 18:12:33.284"/>
-</kw>
-<kw name="Wait Until Location Contains" library="SeleniumLibrary">
-<arg>inventory.html</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" starttime="20260114 18:12:33.284" endtime="20260114 18:12:33.596"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20260114 18:12:34.232" level="INFO">Current page contains text 'Products'.</msg>
-<status status="PASS" starttime="20260114 18:12:33.596" endtime="20260114 18:12:34.232"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:29.669" endtime="20260114 18:12:34.232"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:21.305" endtime="20260114 18:12:34.233"/>
-</test>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:12:34.236" endtime="20260114 18:12:36.667"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:21.289" endtime="20260114 18:12:36.667"/>
-</suite>
-<suite id="s1-s3" name="Test Burger Menu" source="C:\robot_framework_project\tests\test_burger_menu.robot">
-<test id="s1-s3-t1" name="User can see burger menu options" line="7">
-<kw name="Open Application Browser" library="keywords">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:12:36.682" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA622770&gt;</msg>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${prefs}</var>
-<arg>credentials_enable_service=${False}</arg>
-<arg>profile.password_manager_enabled=${False}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:12:36.682" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--incognito</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:36.682"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:12:36.682" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:39.566"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:12:39.566" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:12:39.566" endtime="20260114 18:12:40.069"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:12:40.069" endtime="20260114 18:12:40.435"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:12:40.435" endtime="20260114 18:12:40.435"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:40.435"/>
-</kw>
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:40.435" endtime="20260114 18:12:41.099"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:41.101" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:12:41.099" endtime="20260114 18:12:42.621"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:42.622" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:12:42.621" endtime="20260114 18:12:43.733"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:43.733" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:12:43.733" endtime="20260114 18:12:44.860"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:12:44.860" endtime="20260114 18:12:45.185"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:40.435" endtime="20260114 18:12:45.185"/>
-</kw>
-<kw name="Open Burger Menu" library="keywords">
-<doc>Ouvre le menu burger et attend que toutes les options soient visibles.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:45.187" endtime="20260114 18:12:45.834"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:45.835" level="INFO">Clicking button 'id:react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260114 18:12:45.834" endtime="20260114 18:12:47.485"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:47.486" endtime="20260114 18:12:48.153"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:45.186" endtime="20260114 18:12:48.153"/>
-</kw>
-<kw name="Verify Burger Menu Options" library="keywords">
-<doc>Vérifie la présence de toutes les options du menu burger.</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
+<arg>${SHOPPING_CART_BADGE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260114 18:12:48.787" level="INFO">Element 'id:inventory_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260114 18:12:48.154" endtime="20260114 18:12:48.787"/>
+<msg timestamp="20260114 19:02:03.780" level="INFO">Element 'css:.shopping_cart_badge' is displayed.</msg>
+<status status="PASS" starttime="20260114 19:02:03.123" endtime="20260114 19:02:03.780"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${MENU_ABOUT}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260114 18:12:49.428" level="INFO">Element 'id:about_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260114 18:12:48.787" endtime="20260114 18:12:49.428"/>
+<status status="PASS" starttime="20260114 19:02:01.418" endtime="20260114 19:02:03.780"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${MENU_LOGOUT}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260114 18:12:50.067" level="INFO">Element 'id:logout_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260114 18:12:49.428" endtime="20260114 18:12:50.067"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<kw name="Reset App State" library="keywords">
+<kw name="Click Burger Menu Option" library="keywords">
 <arg>${MENU_RESET_APP_STATE}</arg>
+<kw name="Open Burger Menu" library="keywords">
+<kw name="Close Burger Menu If Open" library="keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${BURGER_MENU_CLOSE_BTN}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BURGER_MENU_CLOSE_BTN}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260114 18:12:50.716" level="INFO">Element 'id:reset_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260114 18:12:50.067" endtime="20260114 18:12:50.716"/>
+<msg timestamp="20260114 19:02:04.889" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260114 19:02:04.889" level="FAIL">The element 'id:react-burger-cross-btn' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20260114 19:02:03.780" endtime="20260114 19:02:04.889"/>
 </kw>
-<kw name="Close Burger Menu" library="keywords">
-<doc>Ferme le menu burger en cliquant sur le bouton X et attend que le menu disparaisse.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<msg timestamp="20260114 19:02:04.889" level="INFO">${is_visible} = False</msg>
+<status status="PASS" starttime="20260114 19:02:03.780" endtime="20260114 19:02:04.889"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${is_visible}</arg>
+<arg>Click Element</arg>
 <arg>${BURGER_MENU_CLOSE_BTN}</arg>
-<arg>5s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260114 19:02:04.889" endtime="20260114 19:02:04.889"/>
+</kw>
+<status status="PASS" starttime="20260114 19:02:03.780" endtime="20260114 19:02:04.889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BURGER_MENU_BTN}</arg>
+<arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:50.716" endtime="20260114 18:12:51.383"/>
+<status status="PASS" starttime="20260114 19:02:04.889" endtime="20260114 19:02:05.540"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BURGER_MENU_BTN}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260114 19:02:05.540" endtime="20260114 19:02:06.458"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260114 19:02:06.773" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20260114 19:02:06.458" endtime="20260114 19:02:06.773"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BURGER_MENU_CLOSE_BTN}</arg>
+<arg>${BURGER_MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:51.383" level="INFO">Clicking element 'id:react-burger-cross-btn'.</msg>
-<status status="PASS" starttime="20260114 18:12:51.383" endtime="20260114 18:12:52.151"/>
+<msg timestamp="20260114 19:02:06.774" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260114 19:02:06.773" endtime="20260114 19:02:07.508"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_CLOSE_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20260114 18:12:52.151" endtime="20260114 18:12:52.778"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:50.716" endtime="20260114 18:12:52.778"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:48.154" endtime="20260114 18:12:52.778"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:36.682" endtime="20260114 18:12:52.778"/>
-</test>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:12:52.778" endtime="20260114 18:12:55.289"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:36.667" endtime="20260114 18:12:55.289"/>
-</suite>
-<suite id="s1-s4" name="Test Login" source="C:\robot_framework_project\tests\test_login.robot">
-<kw name="Open Application Browser" library="keywords" type="SETUP">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:12:55.304" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA620EE0&gt;</msg>
-<status status="PASS" starttime="20260114 18:12:55.303" endtime="20260114 18:12:55.304"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${prefs}</var>
-<arg>credentials_enable_service=${False}</arg>
-<arg>profile.password_manager_enabled=${False}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:12:55.305" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:12:55.304" endtime="20260114 18:12:55.305"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:55.305" endtime="20260114 18:12:55.306"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:55.306" endtime="20260114 18:12:55.306"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:55.306" endtime="20260114 18:12:55.306"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:55.306" endtime="20260114 18:12:55.307"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:55.307" endtime="20260114 18:12:55.307"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--incognito</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:12:55.308" endtime="20260114 18:12:55.308"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:12:55.310" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:12:55.308" endtime="20260114 18:12:58.281"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:12:58.282" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:12:58.282" endtime="20260114 18:12:58.760"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:12:58.760" endtime="20260114 18:12:59.102"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:12:59.103" endtime="20260114 18:12:59.103"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:55.303" endtime="20260114 18:12:59.103"/>
-</kw>
-<test id="s1-s4-t1" name="User can login successfully" line="8">
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:12:59.105" endtime="20260114 18:12:59.769"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:12:59.773" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:12:59.770" endtime="20260114 18:13:00.937"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:00.943" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:13:00.938" endtime="20260114 18:13:02.023"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:02.026" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:13:02.024" endtime="20260114 18:13:03.187"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:13:03.187" endtime="20260114 18:13:03.530"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:59.104" endtime="20260114 18:13:03.530"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:59.104" endtime="20260114 18:13:03.531"/>
-</test>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:13:03.534" endtime="20260114 18:13:05.946"/>
-</kw>
-<status status="PASS" starttime="20260114 18:12:55.292" endtime="20260114 18:13:05.946"/>
-</suite>
-<suite id="s1-s5" name="Test Logout" source="C:\robot_framework_project\tests\test_logout.robot">
-<test id="s1-s5-t1" name="User can logout successfully" line="7">
-<kw name="Open Application Browser" library="keywords">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:13:05.980" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA64E5F0&gt;</msg>
-<status status="PASS" starttime="20260114 18:13:05.979" endtime="20260114 18:13:05.980"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${prefs}</var>
-<arg>credentials_enable_service=${False}</arg>
-<arg>profile.password_manager_enabled=${False}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:13:05.981" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:13:05.980" endtime="20260114 18:13:05.981"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:05.981" endtime="20260114 18:13:05.981"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:05.982" endtime="20260114 18:13:05.982"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:05.982" endtime="20260114 18:13:05.982"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:05.983" endtime="20260114 18:13:05.983"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:05.983" endtime="20260114 18:13:05.983"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--incognito</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:05.984" endtime="20260114 18:13:05.984"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:13:05.986" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:13:05.984" endtime="20260114 18:13:08.731"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:13:08.731" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:13:08.731" endtime="20260114 18:13:09.272"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:13:09.272" endtime="20260114 18:13:09.626"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:13:09.626" endtime="20260114 18:13:09.627"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:05.979" endtime="20260114 18:13:09.627"/>
-</kw>
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:09.628" endtime="20260114 18:13:10.296"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:10.297" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:13:10.296" endtime="20260114 18:13:11.424"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:11.428" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:13:11.425" endtime="20260114 18:13:12.539"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:12.540" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:13:12.539" endtime="20260114 18:13:13.632"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:13:13.632" endtime="20260114 18:13:13.964"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:09.628" endtime="20260114 18:13:13.964"/>
-</kw>
-<kw name="Logout User" library="keywords">
-<doc>Déconnecte l'utilisateur via le menu burger et attend le retour sur la page de login.</doc>
-<kw name="Open Burger Menu" library="keywords">
-<doc>Ouvre le menu burger et attend que toutes les options soient visibles.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:13.965" endtime="20260114 18:13:14.606"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:14.607" level="INFO">Clicking button 'id:react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260114 18:13:14.606" endtime="20260114 18:13:16.306"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:16.307" endtime="20260114 18:13:17.008"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:13.965" endtime="20260114 18:13:17.008"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_LOGOUT}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:17.009" endtime="20260114 18:13:17.661"/>
+<status status="PASS" starttime="20260114 19:02:03.780" endtime="20260114 19:02:07.508"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${MENU_LOGOUT}</arg>
+<arg>${option}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:17.662" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
-<status status="PASS" starttime="20260114 18:13:17.661" endtime="20260114 18:13:18.359"/>
+<msg timestamp="20260114 19:02:07.508" level="INFO">Clicking element 'id:reset_sidebar_link'.</msg>
+<status status="PASS" starttime="20260114 19:02:07.508" endtime="20260114 19:02:08.240"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:18.359" endtime="20260114 18:13:18.985"/>
+<status status="PASS" starttime="20260114 19:02:03.780" endtime="20260114 19:02:08.240"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:13.965" endtime="20260114 18:13:18.985"/>
+<status status="PASS" starttime="20260114 19:02:03.780" endtime="20260114 19:02:08.240"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:05.977" endtime="20260114 18:13:18.986"/>
-</test>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:13:18.988" endtime="20260114 18:13:21.407"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:05.953" endtime="20260114 18:13:21.407"/>
-</suite>
-<suite id="s1-s6" name="Test Menu Close" source="C:\robot_framework_project\tests\test_menu_close.robot">
-<test id="s1-s6-t1" name="User can close burger menu using X button" line="7">
-<kw name="Open Application Browser" library="keywords">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:13:21.421" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA64FF70&gt;</msg>
-<status status="PASS" starttime="20260114 18:13:21.420" endtime="20260114 18:13:21.422"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${prefs}</var>
-<arg>credentials_enable_service=${False}</arg>
-<arg>profile.password_manager_enabled=${False}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:13:21.425" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:13:21.422" endtime="20260114 18:13:21.425"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:21.425" endtime="20260114 18:13:21.426"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:21.426" endtime="20260114 18:13:21.426"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:21.426" endtime="20260114 18:13:21.427"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:21.427" endtime="20260114 18:13:21.427"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:21.427" endtime="20260114 18:13:21.428"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--incognito</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:21.428" endtime="20260114 18:13:21.428"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:13:21.429" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:13:21.428" endtime="20260114 18:13:24.570"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:13:24.571" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:13:24.570" endtime="20260114 18:13:25.114"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:13:25.114" endtime="20260114 18:13:25.471"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:13:25.471" endtime="20260114 18:13:25.472"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:21.419" endtime="20260114 18:13:25.472"/>
-</kw>
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:25.474" endtime="20260114 18:13:26.139"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:26.141" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:13:26.139" endtime="20260114 18:13:27.262"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:27.263" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:13:27.262" endtime="20260114 18:13:28.303"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:28.307" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:13:28.304" endtime="20260114 18:13:29.500"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:13:29.501" endtime="20260114 18:13:29.844"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:25.473" endtime="20260114 18:13:29.845"/>
-</kw>
-<kw name="Open Burger Menu" library="keywords">
-<doc>Ouvre le menu burger et attend que toutes les options soient visibles.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:29.847" endtime="20260114 18:13:30.529"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${BURGER_MENU_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:30.531" level="INFO">Clicking button 'id:react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260114 18:13:30.529" endtime="20260114 18:13:32.224"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:32.224" endtime="20260114 18:13:32.870"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:29.846" endtime="20260114 18:13:32.870"/>
-</kw>
-<kw name="Close Burger Menu" library="keywords">
-<doc>Ferme le menu burger en cliquant sur le bouton X et attend que le menu disparaisse.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_CLOSE_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:32.871" endtime="20260114 18:13:33.536"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${BURGER_MENU_CLOSE_BTN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:33.537" level="INFO">Clicking element 'id:react-burger-cross-btn'.</msg>
-<status status="PASS" starttime="20260114 18:13:33.536" endtime="20260114 18:13:34.236"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${BURGER_MENU_CLOSE_BTN}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20260114 18:13:34.236" endtime="20260114 18:13:34.871"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:32.870" endtime="20260114 18:13:34.871"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:21.418" endtime="20260114 18:13:34.872"/>
-</test>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:13:34.873" endtime="20260114 18:13:37.275"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:21.410" endtime="20260114 18:13:37.275"/>
-</suite>
-<suite id="s1-s7" name="Test Reset App" source="C:\robot_framework_project\tests\test_reset_app.robot">
-<test id="s1-s7-t1" name="User can reset application state" line="7">
-<kw name="Open Application Browser" library="keywords">
-<doc>Ouvre Chrome sans Password Manager ni popups Google.</doc>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20260114 18:13:37.288" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001FDDA621900&gt;</msg>
-<status status="PASS" starttime="20260114 18:13:37.288" endtime="20260114 18:13:37.288"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${prefs}</var>
-<arg>credentials_enable_service=${False}</arg>
-<arg>profile.password_manager_enabled=${False}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20260114 18:13:37.289" level="INFO">${prefs} = {'credentials_enable_service': False, 'profile.password_manager_enabled': False}</msg>
-<status status="PASS" starttime="20260114 18:13:37.288" endtime="20260114 18:13:37.289"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:37.289" endtime="20260114 18:13:37.290"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-save-password-bubble</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:37.290" endtime="20260114 18:13:37.290"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:37.290" endtime="20260114 18:13:37.291"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:37.291" endtime="20260114 18:13:37.291"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:37.291" endtime="20260114 18:13:37.291"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--incognito</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20260114 18:13:37.291" endtime="20260114 18:13:37.292"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260114 18:13:37.293" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20260114 18:13:37.292" endtime="20260114 18:13:44.069"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20260114 18:13:44.070" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
-<status status="PASS" starttime="20260114 18:13:44.069" endtime="20260114 18:13:45.380"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260114 18:13:45.380" endtime="20260114 18:13:45.813"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20260114 18:13:45.813" endtime="20260114 18:13:45.814"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:37.287" endtime="20260114 18:13:45.814"/>
-</kw>
-<kw name="Login As Standard User" library="keywords">
-<doc>Connecte l'utilisateur avec le compte standard et attend que la page des produits soit chargée.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:45.815" endtime="20260114 18:13:46.511"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_USER}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:46.512" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20260114 18:13:46.511" endtime="20260114 18:13:47.730"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:47.731" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20260114 18:13:47.730" endtime="20260114 18:13:48.844"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:48.845" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20260114 18:13:48.844" endtime="20260114 18:13:49.982"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${PRODUCTS_PAGE_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260114 18:13:49.983" endtime="20260114 18:13:50.335"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:45.815" endtime="20260114 18:13:50.335"/>
-</kw>
-<kw name="Reset Application State" library="keywords">
+<kw name="Verify Cart Is Empty" library="keywords">
 <doc>Réinitialise l'état de l'application et vérifie que le panier est vide et que tous les produits sont remis à "Add to cart".</doc>
 <kw name="Open Burger Menu" library="keywords">
-<doc>Ouvre le menu burger et attend que toutes les options soient visibles.</doc>
+<kw name="Close Burger Menu If Open" library="keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${BURGER_MENU_CLOSE_BTN}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BURGER_MENU_CLOSE_BTN}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20260114 19:02:08.856" level="INFO">Element 'id:react-burger-cross-btn' is displayed.</msg>
+<status status="PASS" starttime="20260114 19:02:08.240" endtime="20260114 19:02:08.856"/>
+</kw>
+<msg timestamp="20260114 19:02:08.856" level="INFO">${is_visible} = True</msg>
+<status status="PASS" starttime="20260114 19:02:08.240" endtime="20260114 19:02:08.856"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${is_visible}</arg>
+<arg>Click Element</arg>
+<arg>${BURGER_MENU_CLOSE_BTN}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BURGER_MENU_CLOSE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260114 19:02:08.856" level="INFO">Clicking element 'id:react-burger-cross-btn'.</msg>
+<status status="PASS" starttime="20260114 19:02:08.856" endtime="20260114 19:02:09.540"/>
+</kw>
+<status status="PASS" starttime="20260114 19:02:08.856" endtime="20260114 19:02:09.540"/>
+</kw>
+<status status="PASS" starttime="20260114 19:02:08.240" endtime="20260114 19:02:09.540"/>
+</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${BURGER_MENU_BTN}</arg>
-<arg>5s</arg>
+<arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:50.338" endtime="20260114 18:13:50.984"/>
+<status status="PASS" starttime="20260114 19:02:09.541" endtime="20260114 19:02:10.180"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${BURGER_MENU_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:50.985" level="INFO">Clicking button 'id:react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260114 18:13:50.984" endtime="20260114 18:13:52.650"/>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260114 19:02:10.180" endtime="20260114 19:02:11.133"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENU_ALL_ITEMS}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:52.650" endtime="20260114 18:13:53.308"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260114 19:02:11.445" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20260114 19:02:11.133" endtime="20260114 19:02:11.445"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:50.337" endtime="20260114 18:13:53.308"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BURGER_MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260114 19:02:11.445" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260114 19:02:11.445" endtime="20260114 19:02:12.122"/>
+</kw>
+<status status="PASS" starttime="20260114 19:02:08.240" endtime="20260114 19:02:12.122"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_RESET_APP_STATE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:53.309" level="INFO">Clicking element 'id:reset_sidebar_link'.</msg>
-<status status="PASS" starttime="20260114 18:13:53.308" endtime="20260114 18:13:54.057"/>
+<msg timestamp="20260114 19:02:12.124" level="INFO">Clicking element 'id:reset_sidebar_link'.</msg>
+<status status="PASS" starttime="20260114 19:02:12.122" endtime="20260114 19:02:12.790"/>
 </kw>
 <kw name="Close Burger Menu" library="keywords">
 <doc>Ferme le menu burger en cliquant sur le bouton X et attend que le menu disparaisse.</doc>
@@ -1195,169 +246,92 @@
 <arg>${BURGER_MENU_CLOSE_BTN}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260114 18:13:54.058" endtime="20260114 18:13:54.722"/>
+<status status="PASS" starttime="20260114 19:02:12.790" endtime="20260114 19:02:13.414"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BURGER_MENU_CLOSE_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:54.724" level="INFO">Clicking element 'id:react-burger-cross-btn'.</msg>
-<status status="PASS" starttime="20260114 18:13:54.722" endtime="20260114 18:13:55.449"/>
+<msg timestamp="20260114 19:02:13.414" level="INFO">Clicking element 'id:react-burger-cross-btn'.</msg>
+<status status="PASS" starttime="20260114 19:02:13.414" endtime="20260114 19:02:14.092"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${BURGER_MENU_CLOSE_BTN}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20260114 18:13:55.449" endtime="20260114 18:13:56.101"/>
+<status status="PASS" starttime="20260114 19:02:14.092" endtime="20260114 19:02:14.732"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:54.057" endtime="20260114 18:13:56.102"/>
+<status status="PASS" starttime="20260114 19:02:12.790" endtime="20260114 19:02:14.732"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${SHOPPING_CART_BADGE}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20260114 18:13:56.102" endtime="20260114 18:13:56.444"/>
+<status status="PASS" starttime="20260114 19:02:14.732" endtime="20260114 19:02:15.044"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <var>@{buttons}</var>
 <arg>css:button.btn_inventory</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20260114 18:13:56.780" level="INFO">@{buttons} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.44")&gt; | &lt;selenium.webdr...</msg>
-<status status="PASS" starttime="20260114 18:13:56.444" endtime="20260114 18:13:56.780"/>
+<msg timestamp="20260114 19:02:15.373" level="INFO">@{buttons} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ffe31087a466911e7f8c9f70f8996c32", element="f.25B5A317E2BB67F7C2C8773AC57F0BBB.d.F6B4DBF7AE4677016D33BC8321FAD1E4.e.38")&gt; | &lt;selenium.webdr...</msg>
+<status status="PASS" starttime="20260114 19:02:15.044" endtime="20260114 19:02:15.373"/>
 </kw>
 <for flavor="IN">
 <var>${btn}</var>
 <value>@{buttons}</value>
 <iter>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.44")&gt;</var>
+<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ffe31087a466911e7f8c9f70f8996c32", element="f.25B5A317E2BB67F7C2C8773AC57F0BBB.d.F6B4DBF7AE4677016D33BC8321FAD1E4.e.38")&gt;</var>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${text}</var>
 <arg>${btn}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:57.119" level="INFO">${text} = Add to cart</msg>
-<status status="PASS" starttime="20260114 18:13:56.781" endtime="20260114 18:13:57.119"/>
+<msg timestamp="20260114 19:02:15.747" level="INFO">${text} = Remove</msg>
+<status status="PASS" starttime="20260114 19:02:15.373" endtime="20260114 19:02:15.747"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${text}</arg>
 <arg>Add to cart</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20260114 18:13:57.120" endtime="20260114 18:13:57.120"/>
+<msg timestamp="20260114 19:02:15.747" level="FAIL">Remove != Add to cart</msg>
+<status status="FAIL" starttime="20260114 19:02:15.747" endtime="20260114 19:02:15.747"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:56.780" endtime="20260114 18:13:57.121"/>
+<status status="FAIL" starttime="20260114 19:02:15.373" endtime="20260114 19:02:15.747"/>
 </iter>
-<iter>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.45")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${btn}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:57.445" level="INFO">${text} = Add to cart</msg>
-<status status="PASS" starttime="20260114 18:13:57.122" endtime="20260114 18:13:57.445"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Add to cart</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20260114 18:13:57.445" endtime="20260114 18:13:57.446"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:57.121" endtime="20260114 18:13:57.446"/>
-</iter>
-<iter>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.46")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${btn}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:57.770" level="INFO">${text} = Add to cart</msg>
-<status status="PASS" starttime="20260114 18:13:57.446" endtime="20260114 18:13:57.770"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Add to cart</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20260114 18:13:57.770" endtime="20260114 18:13:57.772"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:57.446" endtime="20260114 18:13:57.772"/>
-</iter>
-<iter>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.47")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${btn}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:58.093" level="INFO">${text} = Add to cart</msg>
-<status status="PASS" starttime="20260114 18:13:57.772" endtime="20260114 18:13:58.093"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Add to cart</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20260114 18:13:58.093" endtime="20260114 18:13:58.094"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:57.772" endtime="20260114 18:13:58.095"/>
-</iter>
-<iter>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.48")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${btn}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:58.448" level="INFO">${text} = Add to cart</msg>
-<status status="PASS" starttime="20260114 18:13:58.095" endtime="20260114 18:13:58.448"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Add to cart</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20260114 18:13:58.448" endtime="20260114 18:13:58.449"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:58.095" endtime="20260114 18:13:58.449"/>
-</iter>
-<iter>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f8a76d24c9d0d26b4f0af82333a04e6d", element="f.4C5A4B792B27D606475A165A749E0D51.d.06E3172E494A55EE06ED053AE8F9F493.e.49")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${btn}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20260114 18:13:58.774" level="INFO">${text} = Add to cart</msg>
-<status status="PASS" starttime="20260114 18:13:58.449" endtime="20260114 18:13:58.774"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Add to cart</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20260114 18:13:58.774" endtime="20260114 18:13:58.775"/>
-</kw>
-<status status="PASS" starttime="20260114 18:13:58.449" endtime="20260114 18:13:58.775"/>
-</iter>
-<status status="PASS" starttime="20260114 18:13:56.780" endtime="20260114 18:13:58.775"/>
+<status status="FAIL" starttime="20260114 19:02:15.373" endtime="20260114 19:02:15.747"/>
 </for>
-<status status="PASS" starttime="20260114 18:13:50.336" endtime="20260114 18:13:58.775"/>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${SHOPPING_CART_BADGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="NOT RUN" starttime="20260114 19:02:15.747" endtime="20260114 19:02:15.747"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:37.286" endtime="20260114 18:13:58.776"/>
+<status status="FAIL" starttime="20260114 19:02:08.240" endtime="20260114 19:02:15.747"/>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260114 19:02:16.223" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260114 19:02:15.747" endtime="20260114 19:02:16.223"/>
+</kw>
+<status status="PASS" starttime="20260114 19:02:15.747" endtime="20260114 19:02:16.223"/>
+</kw>
+<doc>Vérifie que l'utilisateur peut réinitialiser l'état de l'application et vider le panier</doc>
+<status status="FAIL" starttime="20260114 19:01:55.185" endtime="20260114 19:02:16.223">Remove != Add to cart</status>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260114 18:13:58.778" endtime="20260114 18:14:01.201"/>
+<status status="PASS" starttime="20260114 19:02:16.223" endtime="20260114 19:02:18.725"/>
 </kw>
-<status status="PASS" starttime="20260114 18:13:37.278" endtime="20260114 18:14:01.202"/>
-</suite>
-<status status="PASS" starttime="20260114 18:12:00.808" endtime="20260114 18:14:01.206"/>
+<status status="FAIL" starttime="20260114 19:01:54.882" endtime="20260114 19:02:18.725"/>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="7" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test About">Tests.Test About</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s2" name="Test All Items">Tests.Test All Items</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s3" name="Test Burger Menu">Tests.Test Burger Menu</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s4" name="Test Login">Tests.Test Login</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s5" name="Test Logout">Tests.Test Logout</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s6" name="Test Menu Close">Tests.Test Menu Close</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s7" name="Test Reset App">Tests.Test Reset App</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Reset App">Test Reset App</stat>
 </suite>
 </statistics>
 <errors>
