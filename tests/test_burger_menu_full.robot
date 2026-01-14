@@ -16,7 +16,7 @@ Burger Menu - Full Corrected Scenario
     Click All Items And Stay On Products Page
     Click About And Verify Saucelabs Page
     Return To Application
-    Add Product To Cart
+    # Add Product To Cart
     Reset App State
     Verify Cart Is Empty
     Logout From Application

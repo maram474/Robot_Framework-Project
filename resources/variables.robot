@@ -1,6 +1,6 @@
 *** Variables ***
 ${URL}                     https://www.saucedemo.com/
-${USERNAME}                standard_user
+${USERNAME}                standard_user    
 ${PASSWORD}                secret_sauce
 
 ${LOGIN_USER}              id:user-name
