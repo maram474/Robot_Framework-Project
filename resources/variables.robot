@@ -19,4 +19,4 @@ ${MENU_RESET_APP_STATE}    id:reset_sidebar_link
 
 ${PRODUCTS_PAGE_TEXT}      Products
 ${LOGOUT_PAGE_BUTTON}      id:login-button
-${SHOPPING_CART_BADGE}     class:shopping_cart_link
+${SHOPPING_CART_BADGE}     class:shopping_cart_badge

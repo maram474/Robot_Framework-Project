@@ -81,8 +81,19 @@ Open About Page
     Wait Until Location Contains    saucelabs.com    10s
 
 Reset Application State
-    [Documentation]    Réinitialise l'état de l'application via le menu burger et vérifie que le panier est vide.
+    [Documentation]    Réinitialise l'état de l'application et vérifie que le panier est vide et que tous les produits sont remis à "Add to cart".
+
     Open Burger Menu
     Click Element    ${MENU_RESET_APP_STATE}
-    Wait Until Element Does Not Contain    ${SHOPPING_CART_BADGE}    *    5s
     Close Burger Menu
+
+    # 1️ Vérifier que le panier est vide
+    Wait Until Element Is Not Visible    ${SHOPPING_CART_BADGE}    5s
+
+    # 2️ Vérifier que tous les boutons sont "Add to cart"
+    @{buttons}=    Get WebElements    css:button.btn_inventory
+
+    FOR    ${btn}    IN    @{buttons}
+        ${text}=    Get Text    ${btn}
+        Should Be Equal    ${text}    Add to cart
+    END
