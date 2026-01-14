@@ -23,7 +23,7 @@ Open Application Browser
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --incognito
 
-    Create Webdriver    Chrome    options=${options}
+    Open Browser    ${URL}    Chrome    options=${options}
     Go To    ${URL}
     Maximize Browser Window
     Set Selenium Speed    0.3s
