@@ -50,17 +50,28 @@ Get Locator
 # ============================
 Open Application Browser
     ${config}=    Load Config
+
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+
     ${prefs}=    Create Dictionary
     ...    credentials_enable_service=${False}
     ...    profile.password_manager_enabled=${False}
+
     Call Method    ${options}    add_experimental_option    prefs    ${prefs}
+
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --incognito
+
+    # 🔥 OBLIGATOIRE EN GITHUB ACTIONS
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+
     Open Browser    ${config}[URL]    Chrome    options=${options}
     Maximize Browser Window
     Set Selenium Speed    0.3s
+
 
 # ============================
 # Authentication
