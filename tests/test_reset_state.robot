@@ -9,6 +9,6 @@ User Can Reset Application State
     [Documentation]    Vérifie que l'utilisateur peut réinitialiser l'état de l'application et vider le panier
     Open Application Browser
     Login With Standard User
-    # Add Product To Cart
+    Add Product To Cart
     Reset App State
     Verify Cart Is Empty
