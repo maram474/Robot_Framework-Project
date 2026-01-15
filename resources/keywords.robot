@@ -64,7 +64,7 @@ Open Application Browser
     Call Method    ${options}    add_argument    --incognito
 
     # 🔥 OBLIGATOIRE EN GITHUB ACTIONS
-    Call Method    ${options}    add_argument    --headless
+    # Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
 
@@ -179,13 +179,13 @@ Verify Cart Is Empty
     Wait Until Element Is Not Visible    ${badge_strategy}:${badge_value}    5s
 
     # 2️ Vérifier que tous les boutons sont "Add to cart"
-    # @{buttons}=    Get WebElements    css:button.btn_inventory
+    @{buttons}=    Get WebElements    css:button.btn_inventory
 
-    # FOR    ${btn}    IN    @{buttons}
-    #     ${text}=    Get Text    ${btn}
-    #     Should Be Equal    ${text}    Add to cart
-    # END
-    # Element Should Not Be Visible    ${badge_strategy}:${badge_value}
+    FOR    ${btn}    IN    @{buttons}
+        ${text}=    Get Text    ${btn}
+        Should Be Equal    ${text}    Add to cart
+    END
+    Element Should Not Be Visible    ${badge_strategy}:${badge_value}
 
 Logout From Application
     Click Burger Menu Option    MENU_LOGOUT
